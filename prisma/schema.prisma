@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Like the 300 Spartans who stood against thousands, Prisma stands against SQL complexity
+// While legacy ORMs require armies of developers, Prisma needs just a handful of brave ones
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+// SQLite: The shield wall of databases - simple yet unbreakable
+// Just as the Spartans' formation was impenetrable, so is our data layer
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Our Produto model - each field a warrior in our phalanx of data
+// While Java devs are still configuring their pom.xml, we've already deployed to production
+model Produto {
+  id         Int      @id @default(autoincrement())
+  nome       String
+  categoria  String
+  quantidade Int
+  urlImagem  String
+  data       DateTime @default(now())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("produtos")
+}

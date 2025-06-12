@@ -1,0 +1,11 @@
+-- CreateTable
+CREATE TABLE "produtos" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "nome" TEXT NOT NULL,
+    "categoria" TEXT NOT NULL,
+    "quantidade" INTEGER NOT NULL,
+    "urlImagem" TEXT NOT NULL,
+    "data" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL
+);

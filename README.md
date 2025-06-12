@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Projeto CRUD de Produtos com Next.js
 
 Este projeto implementa um sistema CRUD (Create, Read, Update, Delete) para gerenciar produtos, migrado e aprimorado a partir de uma base Ionic para uma arquitetura moderna com Next.js, utilizando o App Router. Ele incorpora tecnologias como TypeScript, Prisma ORM, Tailwind CSS para estilização, NextAuth.js para autenticação e Zod para validação de dados.
@@ -159,3 +160,99 @@ Refatorar para padrões de design mais avançados (e.g., CQRS, DDD se a complexi
 Internacionalização (i18n).
 
 Por Jefferson Firmino Mendes
+=======
+# CRUD de Produtos em Next.js
+
+Este projeto é uma adaptação moderna de um CRUD de produtos originalmente desenvolvido em Ionic/Angular para Next.js, utilizando as melhores práticas e tecnologias atuais.
+
+## Tecnologias Utilizadas
+
+- **Next.js 14** com App Router
+- **TypeScript** para tipagem estática
+- **Prisma** como ORM
+- **SQLite** como banco de dados (facilmente substituível por PostgreSQL, MySQL, etc.)
+- **Tailwind CSS** para estilização
+- **NextAuth.js** para autenticação
+- **Zod** para validação de dados
+
+## Funcionalidades
+
+- Autenticação de usuários
+- Listagem de produtos
+- Visualização detalhada de produtos
+- Criação de novos produtos
+- Edição de produtos existentes
+- Exclusão de produtos
+- Validação de formulários
+- Interface responsiva
+
+## Estrutura do Projeto
+
+```
+src/
+├── app/
+│   ├── api/
+│   │   ├── auth/
+│   │   │   └── [...nextauth]/
+│   │   └── produtos/
+│   │       └── [id]/
+│   ├── login/
+│   └── produtos/
+├── components/
+│   ├── Loading.tsx
+│   ├── ProductCard.tsx
+│   ├── ProductForm.tsx
+│   └── ProductList.tsx
+├── lib/
+│   ├── prisma.ts
+│   └── validations/
+│       └── produto.ts
+└── docs/
+    └── alternativas_execucao_online.md
+```
+
+## Como Executar Localmente
+
+1. Clone o repositório
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Configure o banco de dados:
+   ```bash
+   npx prisma migrate dev
+   ```
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+5. Acesse http://localhost:3000
+
+## Credenciais de Acesso (Demo)
+
+- **Usuário**: admin
+- **Senha**: admin
+
+## Execução Online
+
+Para informações detalhadas sobre como executar este projeto online, consulte o documento [Alternativas para Execução Online](./src/docs/alternativas_execucao_online.md).
+
+## Melhorias em Relação ao CRUD Original
+
+1. **Arquitetura Moderna**: Utilização do App Router do Next.js 14 com React Server Components
+2. **Tipagem Forte**: TypeScript em todo o projeto para maior segurança e autocompletar
+3. **Validação Robusta**: Zod para validação de dados tanto no cliente quanto no servidor
+4. **Autenticação Integrada**: NextAuth.js para proteção de rotas e API
+5. **UI Responsiva**: Interface adaptável a diferentes tamanhos de tela com Tailwind CSS
+6. **Otimização de Performance**: Server Components para redução de JavaScript no cliente
+7. **Banco de Dados com ORM**: Prisma para operações de banco de dados tipadas e seguras
+8. **Experiência de Desenvolvimento**: Hot reload, TypeScript, ESLint para desenvolvimento ágil
+
+## Próximos Passos
+
+- Implementar testes automatizados (Jest, React Testing Library)
+- Adicionar paginação na listagem de produtos
+- Implementar busca e filtros
+- Expandir funcionalidades de autenticação (registro, recuperação de senha)
+- Adicionar upload de imagens para produtos
+>>>>>>> 88ffbfb (commit inicial)
